@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Create free QR codes for links, text, Wi-Fi and contact details. Customize and download in seconds.">
+<meta name="theme-color" content="#f7f8f4">
+<title>QR Studio — Free QR Code Generator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="#"><span class="mark">▦</span> qr<span>studio</span></a>
+<nav><a href="#generator">Generator</a><a href="#how">How it works</a><a href="#faq">FAQ</a></nav>
+<div class="top-actions"><span class="free">✓ Free to use</span><button id="theme" class="theme">☾ <span>Dark</span></button></div>
+</header>
+<main>
+<section class="hero"><div class="eyebrow">✦ SIMPLE. USEFUL. FREE.</div><h1>Make a QR code.<br><em>Make it easy.</em></h1><p>Create a QR code for a link, message, Wi-Fi network or contact.<br> Customize it and download in seconds.</p></section>
+<section class="workspace" id="generator">
+<div class="panel builder">
+<div class="heading"><div><small>01</small><h2>Your content</h2></div><span>Choose a type</span></div>
+<div class="tabs">
+<button class="tab active" data-kind="url">↗ URL</button><button class="tab" data-kind="text">▤ Text</button><button class="tab" data-kind="wifi">⌁ Wi-Fi</button><button class="tab" data-kind="email">✉ Email</button><button class="tab" data-kind="contact">♙ Contact</button>
+</div>
+<div id="fields" class="fields"></div>
+<div class="rule"></div>
+<div class="heading"><div><small>02</small><h2>Make it yours</h2></div><span>Customize</span></div>
+<div class="custom">
+<label>QR color <span><input type="color" id="fg" value="#203d2b"><code id="fgval">#203D2B</code></span></label>
+<label>Background <span><input type="color" id="bg" value="#ffffff"><code id="bgval">#FFFFFF</code></span></label>
+<label>Image size<select id="size"><option value="256">256 × 256</option><option value="512" selected>512 × 512</option><option value="1024">1024 × 1024</option></select></label>
+</div><button id="reset" class="reset">Reset styling</button>
+</div>
+<aside class="side">
+<div class="panel preview">
+<div class="heading"><div><small>03</small><h2>Your QR code</h2></div><span class="live">● Live preview</span></div>
+<div class="qr-stage"><div id="qrcode"></div><div id="empty" class="empty">▦<span>Your preview appears here</span></div></div>
+<p id="error" class="error"></p>
+<div class="downloads"><button id="png" class="primary">↓ Download PNG</button><button id="svg" class="secondary">SVG</button></div>
+<button id="copy" class="copy">▢ Copy encoded content</button>
+<p class="privacy">✓ Your content is processed in your browser. Nothing is uploaded.</p>
+</div>
+<div class="tip"><b>⌕ &nbsp; Scan before you share</b><p>Test your QR code with a phone camera before printing or publishing it.</p></div>
+</aside>
+</section>
+<section class="how" id="how"><div class="center"><div class="eyebrow">MADE TO BE SIMPLE</div><h2>A useful QR code in three steps.</h2><p>No account, no complicated setup. Just what you need.</p></div>
+<div class="steps"><article><small>01</small><b>↗</b><h3>Add your content</h3><p>Paste a link, write a message, or enter your Wi-Fi or contact details.</p></article><article><small>02</small><b>✦</b><h3>Make it yours</h3><p>Choose a color and size that fit your project or brand.</p></article><article><small>03</small><b>↓</b><h3>Download and share</h3><p>Save a crisp PNG or scalable SVG, then test it before sharing.</p></article></div>
+</section>
+<section class="faq" id="faq"><div><div class="eyebrow">GOOD TO KNOW</div><h2>Frequently asked questions</h2></div><div>
+<details><summary>Are these QR codes free to use?</summary><p>Yes. You can create and download QR codes without creating an account.</p></details>
+<details><summary>Do my details get uploaded?</summary><p>No. QR codes are generated locally in your browser. Your entered content is not sent to our server.</p></details>
+<details><summary>Will my QR code expire?</summary><p>The QR code itself does not expire. If it points to a website, that destination must remain available.</p></details>
+<details><summary>Which file formats can I download?</summary><p>Download a PNG for everyday use or an SVG for sharp scaling in design and print projects.</p></details>
+</div></section>
+</main>
+<footer><a class="brand" href="#"><span class="mark">▦</span> qr<span>studio</span></a><span>Simple tools for everyday tasks.</span><span>© <span id="year"></span> QR Studio</span></footer>
+<script src="app.js"></script>
+</body></html>
